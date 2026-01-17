@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Light of Knowledge</title>
+<style>
+body { font-family: Arial; margin:0; background:#0f2027; color:white; }
+header { text-align:center; padding:20px; background:#203a43; }
+header h1 { color:#ffd700; margin:0; }
+
+.profile-card { 
+  text-align:center; 
+  background:#1c3c4c; 
+  padding:15px; 
+  margin:15px auto; 
+  max-width:400px; 
+  border-radius:12px; 
+}
+.profile-card img { width:80px; height:80px; border-radius:50%; border:2px solid #ffd700; margin-bottom:10px; }
+.profile-card h2 { margin:0; color:#ffd700; }
+.profile-card p { margin:2px 0; opacity:0.8; }
+.subscribe-btn { display:inline-block; padding:10px 20px; margin-top:10px; background:red; color:white; border-radius:6px; text-decoration:none; }
+
+.description { 
+  margin-top:12px; 
+  background:#2c5364; 
+  padding:10px; 
+  border-radius:8px; 
+  font-size:13px; 
+  line-height:1.4; 
+  text-align:left;
+}
+
+.tabs { display:flex; justify-content:center; margin-top:20px; flex-wrap:wrap; }
+.tab-btn { padding:10px 20px; margin:0 5px; cursor:pointer; border-radius:6px; background:#1c3c4c; color:white; }
+.tab-btn.active { background:#ffd700; color:black; }
+
+.post-section { max-width:600px; margin:20px auto; }
+.post-card { background:#2c5364; padding:12px; margin-bottom:15px; border-radius:10px; }
+.post-card iframe { width:100%; height:250px; border:none; border-radius:8px; }
+.post-card h3 { margin:5px 0; font-size:16px; color:#ffd700; }
+.post-card p { font-size:14px; margin:5px 0; }
+.like-comment { margin-top:5px; font-size:13px; opacity:0.8; }
+.like-btn, .comment-btn { cursor:pointer; color:#ffd700; margin-right:10px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>The Light of Knowledge</h1>
+</header>
+
+<div class="profile-card">
+<img src="https://i.postimg.cc/5YdVHDRQ/20250731-224615.png" alt="Profile">
+<h2>The Light of Knowledge</h2>
+<p>10M subscribers</p>
+<p style="margin:5px 0; color:#ffd700; font-weight:bold;">এইখানে ক্লিক করুন</p>
+<p style="margin:5px 0; font-size:24px;">👇</p>
+<a href="https://www.youtube.com/@thelightofknowledge50?sub_confirmation=1" target="_blank" class="subscribe-btn">▶ Subscribe</a>
+
+<div class="description">
+🌟 Welcome to The Light Of Knowledge! 🌟<br>
+This channel is a humble effort to spread Islamic knowledge, awareness, and education. We regularly upload content focused on Islamic teachings, prayers, Quran and Hadith-based discussions, and more.<br><br>
+
+📌 Here you will find:<br>
+- Daily Islamic reminders and educational videos<br>
+- Q&A and religious discussions<br>
+- Videos about Islamic festivals and their significance<br>
+🔔 Subscribe to our channel and stay enlightened by the light of knowledge.<br>
+The Light Of Knowledge – Spreading the light of wisdom and faith.<br><br>
+
+🌟 Welcome to The Light Of Knowledge! 🌟<br>
+এই চ্যানেলটি ইসলামিক জ্ঞান, শিক্ষা, ও সচেতনতা ছড়িয়ে দেওয়ার একটি ক্ষুদ্র প্রচেষ্টা। আমরা নিয়মিতভাবে আপলোড করি ইসলামিক বয়ান, নামাজ ও রোজার বিধান, কোরআন ও হাদীস ভিত্তিক আলোচনাসহ আরও নানা গুরুত্বপূর্ণ বিষয়।<br><br>
+
+📌 এখানে যা পাবেন:<br>
+- দৈনন্দিন জীবনে প্রাসঙ্গিক ইসলামিক ভিডিও<br>
+- প্রশ্নোত্তর পর্ব ও ধর্মীয় আলোচনা<br>
+- ইসলামিক উৎসব ও তাৎপর্যভিত্তিক ভিডিও<br>
+🔔 চ্যানেলটি সাবস্ক্রাইব করুন, ইসলামিক আলোকে আলোকিত থাকুন।<br>
+The Light Of Knowledge
+</div>
+</div>
+
+<div class="tabs">
+  <div class="tab-btn active" onclick="showTab('youtube')">YouTube</div>
+  <div class="tab-btn" onclick="showTab('facebook')">Facebook</div>
+  <div class="tab-btn" onclick="showTab('tiktok')">TikTok</div>
+</div>
+
+<div class="post-section" id="posts"></div>
+
+<script>
+const videoPosts = {
+  youtube:[
+    "https://www.youtube.com/embed/SQ3Z_YQtz7s?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/O_TfqKqXtc8?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/CevANHQaXL4?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/pPHRAITkAxw?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/3pVMw5z9Iyo?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/jw6kO8zQWFU?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/bbMRajaDzok?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/5jIef6SaIyA?rel=0&modestbranding=1"
+  ],
+  facebook:[
+    "https://www.youtube.com/embed/7N9BOIK3v0g?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/rI89lutcxZQ?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/yk8V2S9u0zM?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/0ALyl87UeFk?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/EnwBj7b-Uiw?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/yx7tdmG2jGI?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/fFgULhc3wMM?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/TKg9YNHsDeI?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/MymSYdBjLoY?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/oNUX45vyD9g?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/ZvxiD4XjZS4?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/ZvxiD4XjZS4?rel=0&modestbranding=1"
+  ],
+  tiktok:[
+    "https://www.youtube.com/embed/YbKHTbMuDPU?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/sEoAO10igRA?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/nSAZwS09qhQ?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/3gm-eufS-j8?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/Io3Sll23NZo?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/MuqgdmL6afk?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/Cr5sap6tHEE?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/riljbMpUkkU?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/cUIgB2CwVfA?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/q_rrYF_GCtY?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/EP3yATTquog?rel=0&modestbranding=1",
+    "https://www.youtube.com/embed/SQ3Z_YQtz7s?rel=0&modestbranding=1"
+  ]
+};
+
+let currentPlatform = 'youtube';
+const likesStart = 10000;
+const commentsStart = 9000;
+
+function showTab(platform){
+  currentPlatform = platform;
+  document.querySelectorAll('.tab-btn').forEach(btn=>btn.classList.remove('active'));
+  event.target.classList.add('active');
+  renderPosts();
+}
+
+function renderPosts(){
+  const postsDiv = document.getElementById("posts");
+  postsDiv.innerHTML = "";
+  videoPosts[currentPlatform].forEach((link,index)=>{
+    const div = document.createElement("div");
+    div.className = "post-card";
+    div.innerHTML = `
+      <h3>Video ${index+1}</h3>
+      <iframe src="${link}" allowfullscreen></iframe>
+      <p>Daily Islamic reminder #${index+1}</p>
+      <div class="like-comment">
+        <span class="like-btn" onclick="likePost(${index})">👍 ${likesStart}</span>
+        <span class="comment-btn">💬 ${commentsStart}</span>
+      </div>
+    `;
+    postsDiv.appendChild(div);
+  });
+}
+
+function likePost(index){
+  const span = document.querySelectorAll('.like-btn')[index];
+  let count = parseInt(span.textContent.replace('👍 ',''));
+  count++;
+  span.textContent = "👍 "+count;
+}
+
+renderPosts();
+</script>
+
+</body>
+</html>
